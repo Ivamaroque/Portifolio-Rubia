@@ -1,6 +1,6 @@
 # Portfólio – Rúbia Raquel Dantas Roque
 
-Portfólio profissional e acadêmico de **Rúbia Raquel Dantas Roque**, Mestra em Educação Especial pela UFRN, pesquisadora em Comunicação Alternativa e Tecnologia Assistiva, e Secretária Municipal de Educação de Carnaúba dos Dantas/RN.
+Portfólio profissional e acadêmico de **Rúbia Raquel Dantas Roque**, Mestra em Educação Especial pela UFRN, pesquisadora, gestora pública e assessora em educação especial inclusiva.
 
 ## Estrutura
 
@@ -13,14 +13,16 @@ Portfólio profissional e acadêmico de **Rúbia Raquel Dantas Roque**, Mestra e
 
 ## Seções do Portfólio
 
-- **Hero** – apresentação rápida com nome, título e botões de ação
-- **Sobre** – resumo profissional e indicadores de carreira
+- **Hero** – painel editorial com marca RD, grafismos próprios, credenciais e espaço para foto sem fundo
+- **Sobre** – composição alternada de foto e texto, resumo profissional e indicadores de carreira
+- **Soluções** – palestras, workshops, cursos, consultoria e mentoria
+- **Diferenciais** – experiência, personalização, políticas públicas e acompanhamento
 - **Formação Acadêmica** – Mestrado, 4 especializações e graduação em Pedagogia
-- **Atuação Profissional** – cargos, funções e linha do tempo desde 1998
+- **Atuação Profissional** – cargos e funções de destaque
 - **Pesquisa** – linha de pesquisa, 3 projetos em andamento e áreas de interesse
 - **Publicações** – livro, capítulos, artigo e trabalhos em congressos
 - **Acessibilidade & Inclusão** – competências e compromissos com a educação inclusiva
-- **Contato** – endereço profissional, telefone e links para Lattes / ORCID
+- **Contato** – WhatsApp com mensagem pronta e links para Lattes / ORCID
 
 ## Acessibilidade
 

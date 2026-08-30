@@ -6,40 +6,6 @@
 (function () {
   'use strict';
 
-  /* ---- Theme toggle ---- */
-  const html        = document.documentElement;
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon   = document.getElementById('theme-icon');
-
-  const STORAGE_KEY = 'portfolio-theme';
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  function applyTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    if (themeIcon) {
-      themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-    }
-    if (themeToggle) {
-      themeToggle.setAttribute(
-        'aria-label',
-        theme === 'dark' ? 'Alternar para modo claro' : 'Alternar para modo escuro'
-      );
-    }
-    try { localStorage.setItem(STORAGE_KEY, theme); } catch (_) {}
-  }
-
-  // Initialise theme
-  let savedTheme;
-  try { savedTheme = localStorage.getItem(STORAGE_KEY); } catch (_) {}
-  applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function () {
-      const current = html.getAttribute('data-theme');
-      applyTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  }
-
   /* ---- Mobile hamburger menu ---- */
   const hamburger = document.getElementById('hamburger');
   const navMenu   = document.getElementById('nav-menu');
