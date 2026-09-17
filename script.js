@@ -50,6 +50,60 @@
     });
   }
 
+  /* ---- Subtle motion and scroll reveals ---- */
+  const navbar = document.querySelector('.navbar');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function updateNavbar() {
+    if (navbar) {
+      navbar.classList.toggle('navbar--scrolled', window.scrollY > 24);
+    }
+  }
+
+  updateNavbar();
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('motion-ready');
+
+    const revealSelector = [
+      '.section__header',
+      '.story-split__visual',
+      '.story-split__content',
+      '.stat-card',
+      '.service-card',
+      '.section-cta',
+      '.differential-card',
+      '.differentials-quote',
+      '.edu-card',
+      '.card',
+      '.research-card',
+      '.pub-item',
+      '.a11y-item',
+      '.contact-callout',
+      '.contact-wrapper > *',
+      '.link-card'
+    ].join(',');
+
+    const revealItems = document.querySelectorAll(revealSelector);
+    const revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: .12, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    revealItems.forEach(function (item, index) {
+      item.classList.add('motion-reveal');
+      item.style.setProperty('--motion-delay', String((index % 4) * 70) + 'ms');
+      revealObserver.observe(item);
+    });
+  }
   /* ---- Active nav link on scroll ---- */
   const sections = document.querySelectorAll('section[id]');
   const navLinks  = document.querySelectorAll('.navbar__link');
