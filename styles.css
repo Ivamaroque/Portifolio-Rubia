@@ -370,16 +370,6 @@ main::before {
   object-fit: contain;
   object-position: right bottom;
   filter: drop-shadow(0 18px 24px rgba(16,54,77,.2));
-  -webkit-mask-image:
-    linear-gradient(to bottom, #000 0%, #000 80%, rgba(0,0,0,.82) 88%, transparent 100%),
-    linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to bottom, #000 0%, #000 80%, rgba(0,0,0,.82) 88%, transparent 100%),
-    linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%);
-  mask-repeat: no-repeat;
-  mask-composite: intersect;
 }
 
 .hero__visual {
